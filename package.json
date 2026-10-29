@@ -1,0 +1,56 @@
+{
+  "name": "jimeng-drama",
+  "version": "0.1.0",
+  "private": false,
+  "description": "即梦（Dreamina）CLI 驱动的 AI 短剧生成引擎：剧本拆解、角色定妆、逐镜生成、配音字幕、9:16 竖屏成片",
+  "keywords": [
+    "jimeng",
+    "dreamina",
+    "seedance",
+    "short-drama",
+    "ai-video",
+    "vertical-video",
+    "agent",
+    "ffmpeg"
+  ],
+  "license": "MIT",
+  "author": "liuboacean",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuboacean/jimeng-drama.git"
+  },
+  "homepage": "https://github.com/liuboacean/jimeng-drama#readme",
+  "bugs": {
+    "url": "https://github.com/liuboacean/jimeng-drama/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "drama": "./bin/drama.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsup src/cli.ts --format esm --clean --out-dir dist",
+    "type-check": "tsc --noEmit",
+    "smoke": "tsx src/cli.ts --help",
+    "sync:skill": "cp skill/SKILL.md .workbuddy/skills/jimeng-drama/SKILL.md"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+
+# 生成产物：体积大且含 AI 生成素材，不入库
+projects/
+*.mp4
+*.m4a
+*.aiff
+
+# 本地环境
+.env
+.env.*
+.DS_Store
+*.log
